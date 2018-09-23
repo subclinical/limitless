@@ -1,4 +1,30 @@
-<h1>Limitlessly Gourmet</h1>
-<% @menu.each do |item| %>
-<p class="menu-item"><%=item.name%></p>
-<% end %>
+<h1 class="menu-title">Limitlessly Gourmet</h1>
+<div class="flex-box">
+  <div class="appetizers category-box">
+    <h1 class="menu-title">Appetizers</h1>
+    <% @appetizers.each do |item| %>
+      <p class="menu-item"><%=item.name%></p>
+    <% end %>
+  </div>
+  <div class="mains category-box">
+    <h1 class="menu-title">Main</h1>
+    <% @mains.each do |item| %>
+      <p class="menu-item"><%=item.name%></p>
+    <% end %>
+  </div>
+<div class="desserts category-box">
+  <h1 class="menu-title">Dessert</h1>
+    <% @desserts.each do |item| %>
+      <p class="menu-item"><%=item.name%></p>
+    <% end %>
+  </div>
+<div class="drinks category-box">
+  <h1 class="menu-title">Drinks</h1>
+    <% @alcohols.each do |item| %>
+      <p class="menu-item"><%=item.name%></p>
+    <% end %>
+    <% @beverages.each do |item| %>
+      <p class="menu-item"><%=item.name%></p>
+    <% end %>
+  </div>
+</div>
