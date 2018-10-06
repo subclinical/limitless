@@ -1,3 +1,52 @@
 // Place all the styles related to the admin/menu_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.admin-menu {
+  font-family: "Helvetica";
+}
+
+// .menu-table {
+//   background-color: grey;
+//   color: #323232;
+// }
+
+.flex-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em 0;
+}
+
+.flex-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.index-title {
+  font-family: "orange juice 2.0";
+  font-size: 5em;
+  margin-top: 1em;
+}
+
+.table {
+  background-color: #eee;
+  color: #323232;
+  th {
+    background-color: #ddd;
+  }
+}
+
+.item-price, .item-serving, .numeral {
+  text-align: right;
+}
+
+.new-btn {
+  background-color: #44a644;
+  color: #eee;
+  border: none;
+}
+
+.new-btn:hover {
+  background-color: #00a400;
+  color: #fff;
+}

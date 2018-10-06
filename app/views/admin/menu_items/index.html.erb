@@ -1,0 +1,36 @@
+<head>
+  <script src="https://use.fontawesome.com/25d3b4759d.js"></script>
+</head>
+<div class="container admin-menu">
+  <h1 class="index-title">Limitless Menu Items</h1>
+  <div class="flex-div">
+    <%= link_to "New Item", new_admin_menu_item_path, class: "btn btn-default new-btn" %>
+  </div>
+  <table class="table table-hover menu-table">
+    <th scope="column">Name</th>
+    <th scope="column">Category</th>
+    <th scope="column">Subcategory</th>
+    <th scope="column">Description</th>
+    <th scope="column" class="numeral">Serving Size</th>
+    <th scope="column" class="numeral">Price</th>
+    <th scope="column">Actions</th>
+    <tbody>
+    <% @menu.each do |item| %>
+      <tr>
+        <td class="item-name"><%= item.name %></td>
+        <td class="item-category"><%= item.category %></td>
+        <td class="item-subcategory"><%= item.subcategory %></td>
+        <td class="item-description"><%= item.description %></td>
+        <td class="item-serving"><%= item.serving_size %></td>
+        <td class="item-price"><%= item.price %></td>
+        <td class="item-price">
+          <div class="flex-buttons">
+          <%= link_to "Edit", edit_admin_menu_item_path(item.id), class: "btn btn-default btn-xs" %>
+          <%= link_to "Delete", admin_menu_item_path(item.id), method: :delete, class: "btn btn-danger btn-xs" %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

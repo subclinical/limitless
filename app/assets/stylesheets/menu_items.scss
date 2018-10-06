@@ -13,22 +13,36 @@
   font-style: normal;
 }
 
+body {
+  font-family: 'Special Elite', cursive;
+  background-color: #323232;
+  color: #eee;
+}
+
 .menu-title {
   text-align: center;
-  font-family: "orange juice 2.0";
+  font-family: 'Special Elite', cursive;
 }
 
 .flex-box {
   display: flex;
   flex-direction: column;
-  padding: 1em 20%;
+  padding: 1em 0;
   align-items: center;
   justify-content: space-around;
   .category-box {
-    width: 300px;
-    text-align: center;
-    .menu-item {
-      font-size: 1.5em;
+    width: 70%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    // text-align: center;
+    .item-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .menu-item {
+        font-size: 1.5em;
+      }
     }
   }
 }
