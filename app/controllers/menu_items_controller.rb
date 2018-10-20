@@ -7,6 +7,7 @@ class MenuItemsController < ApplicationController
 
   def index
     @menu = MenuItem.all
+    @combos = MenuItem.where(category: "combo")
     @appetizers = MenuItem.where(category: "appetizer")
     @mains = MenuItem.where(category: "main")
     @desserts = MenuItem.where(category: "dessert")

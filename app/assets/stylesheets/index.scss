@@ -1,8 +1,40 @@
+.index-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .carousel {
-  max-width: 80%;
+  max-width: 90%;
+  .carousel-inner {
+  height: 80vh;
   margin: auto;
+}
+@media(max-width: 767px) {
+  display: none;
+}
 }
 
 .item {
-  height: 80%;
+  max-height: 80vh;
+}
+
+.mobile {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.mobile-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  width: 600px;
+  height: 450px;
+  @media(max-width: 767px) {
+    width: 90vw;
+    height: 50vh;
+  }
 }

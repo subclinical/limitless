@@ -3,6 +3,15 @@
 </head>
 <h1 class="menu-title">Limitlessly Gourmet</h1>
 <div class="flex-box">
+  <div class="combos category-box">
+    <h1 class="menu-title">Specials</h1>
+    <% @combos.each do |item| %>
+      <div class="item-box">
+      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item"><%=item.price%></p>
+      </div>
+    <% end %>
+  </div>
   <div class="appetizers category-box">
     <h1 class="menu-title">Appetizers</h1>
     <% @appetizers.each do |item| %>

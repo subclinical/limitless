@@ -50,3 +50,19 @@
   background-color: #00a400;
   color: #fff;
 }
+
+.category-group {
+  display: flex;
+  flex-direction: column;
+  select {
+    color: #323232;
+    border-radius: 3px;
+    height: 2.5em;
+  }
+}
+
+.index-link {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 8.333333333%;
+}
