@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   get '/about' => 'visitors#index'
+  get '/menu' => 'menu_items#index'
 
   root to: 'visitors#soon'
 end
