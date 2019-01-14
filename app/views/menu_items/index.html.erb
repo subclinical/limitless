@@ -1,10 +1,10 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Megrim|Pompiere|Raleway|Special+Elite" rel="stylesheet">
 </head>
-<h1 class="menu-title">Limitlessly Gourmet</h1>
+<h1 class="menu-title">Menu</h1>
 <div class="flex-box">
   <div class="combos category-box">
-    <h1 class="menu-title">Specials</h1>
+    <h3 class="menu-title">Combos</h3>
     <% @combos.each do |item| %>
       <div class="item-box">
       <p class="menu-item"><%=item.name%></p>
@@ -13,7 +13,7 @@
     <% end %>
   </div>
   <div class="appetizers category-box">
-    <h1 class="menu-title">Appetizers</h1>
+    <h3 class="menu-title">Appetizers</h3>
     <% @appetizers.each do |item| %>
       <div class="item-box">
       <p class="menu-item"><%=item.name%></p>
@@ -22,7 +22,7 @@
     <% end %>
   </div>
   <div class="mains category-box">
-    <h1 class="menu-title">Main</h1>
+    <h3 class="menu-title">Main</h3>
     <% @mains.each do |item| %>
       <div class="item-box">
       <p class="menu-item"><%=item.name%></p>
@@ -30,8 +30,8 @@
       </div>
     <% end %>
   </div>
-<div class="desserts category-box">
-  <h1 class="menu-title">Dessert</h1>
+  <div class="desserts category-box">
+    <h3 class="menu-title">Dessert</h3>
     <% @desserts.each do |item| %>
       <div class="item-box">
       <p class="menu-item"><%=item.name%></p>
@@ -39,8 +39,8 @@
       </div>
     <% end %>
   </div>
-<div class="drinks category-box">
-  <h1 class="menu-title">Drinks</h1>
+  <div class="drinks category-box">
+  <h3 class="menu-title">Drinks</h3>
     <% @alcohols.each do |item| %>
       <div class="item-box">
       <p class="menu-item"><%=item.name%></p>

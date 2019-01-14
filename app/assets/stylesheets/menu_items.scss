@@ -4,8 +4,8 @@
 
 body {
   font-family: 'Special Elite', cursive;
-  background-color: #323232;
-  color: #eee;
+  background-color: #fff;
+  color: slategray;
 }
 
 .menu-title {
@@ -16,7 +16,7 @@ body {
 .flex-box {
   display: flex;
   flex-direction: column;
-  padding: 1em 0;
+  padding: 1em;
   align-items: center;
   justify-content: space-around;
   .category-box {
@@ -31,6 +31,7 @@ body {
       justify-content: space-between;
       .menu-item {
         font-size: 1.5em;
+        font-family: 'Special Elite', cursive;
       }
     }
   }

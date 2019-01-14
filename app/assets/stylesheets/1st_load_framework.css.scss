@@ -6,11 +6,41 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
   }
-// override for the 'Home' navigation link
-.navbar-brand {
-  font-size: inherit;
-  }
 
+.navbar-main {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .navbar-limitless {
+    height: 120px;
+    @media (max-width: 767px) {
+      height: 80px;
+    }
+    @media (max-width: 500px) {
+      height: 50px;
+    }
+  }
+}
+
+.navbar-list {
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  height: 50px;
+  .navbar-link {
+    a {
+      color: slategray;
+    }
+    margin: 1em;
+  }
+  border-bottom: 3px double slategray;
+}
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
@@ -37,7 +67,11 @@ main {
   // background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  margin-top: 170px; // accommodate the navbar
+  margin-bottom: 60px;
+  @media(max-width: 767px) {
+    margin-top: 130px;
+  }
   }
 section {
   @extend .row;

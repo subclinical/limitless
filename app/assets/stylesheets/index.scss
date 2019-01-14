@@ -1,6 +1,10 @@
+.container, main {
+  padding: 0;
+}
 .index-page {
   display: flex;
   flex-direction: column;
+  padding: 0;
   align-items: center;
 }
 .carousel {
@@ -8,10 +12,18 @@
   .carousel-inner {
   height: 80vh;
   margin: auto;
+  }
+  @media(max-width: 767px) {
+    display: none;
+  }
 }
-@media(max-width: 767px) {
-  display: none;
-}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  color: firebrick;
+  display: flex;
+  align-items: center;
 }
 
 .item {
@@ -31,6 +43,7 @@
 }
 
 .location {
+  margin-top: 1em;
   width: 600px;
   height: 450px;
   @media(max-width: 767px) {

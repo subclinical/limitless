@@ -1,0 +1,18 @@
+<!-- Info -->
+<% map_url = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ6X1jU4IuK4gRgcmxK_qySHo&key=#{ENV['GOOGLE_MAP_API_KEY']}" %>
+
+<div class="flex-box">
+  <h3>Hours of Operation</h3>
+  <div class="availability">
+    <div> Monday: 11 AM - 10 PM</div>
+    <div> Tuesday: 11 AM - 10 PM</div>
+    <div> Wednesday: 11 AM - 10 PM</div>
+    <div> Thursday: 11 AM - 10 PM</div>
+    <div> Friday: 11 AM - 10 PM</div>
+    <div> Saturday: 11 AM - 10 PM</div>
+    <div> Sunday: 11 AM - 10 PM</div>
+  </div>
+  <h3>Location</h3>
+  <p>1450 Centre Street, Thornhill, L4J 3N1</p>
+  <iframe class="location" frameborder="0" style="border:0" src=<%=map_url%> allowfullscreen></iframe>
+</div>

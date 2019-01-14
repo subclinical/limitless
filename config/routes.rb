@@ -5,8 +5,11 @@ Rails.application.routes.draw do
     resources :menu_items, except: [:show]
   end
 
-  get '/about' => 'visitors#index'
+  get '/welcome' => 'visitors#index'
   get '/menu' => 'menu_items#index'
+  get '/about' => 'visitors#about'
+  get '/info' => 'visitors#info'
+  get '/contact' => 'visitors#contact'
 
-  root to: 'visitors#soon'
+  root to: 'visitors#index'
 end
