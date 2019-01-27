@@ -3,53 +3,175 @@
 </head>
 <h1 class="menu-title">Menu</h1>
 <div class="flex-box">
-  <div class="combos category-box">
-    <h3 class="menu-title">Combos</h3>
-    <% @combos.each do |item| %>
+  <div class="specials category-box">
+    <h3 class="menu-title">Daily Specials</h3>
+    <p class="menu-title">
+      served with salad and soft drink
+    </p>
+    <hr />
+    <div class="item-box">
+      <p class="menu-label">Monday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@monday&.name%></p>
+          <p class="menu-item text-center"><%=@monday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@monday&.price%></p>
+      </div>
+    </div>
+    <div class="item-box">
+      <p class="menu-label">Tuesday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@tuesday&.name%></p>
+          <p class="menu-item text-center"><%=@tuesday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@tuesday&.price%></p>
+      </div>
+    </div>
+    <div class="item-box">
+      <p class="menu-label">Wednesday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@wednesday&.name%></p>
+          <p class="menu-item text-center"><%=@wednesday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@wednesday&.price%></p>
+      </div>
+    </div>
+    <div class="item-box">
+      <p class="menu-label">Thursday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@thursday&.name%></p>
+          <p class="menu-item text-center"><%=@thursday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@thursday&.price%></p>
+      </div>
+    </div>
+    <div class="item-box">
+      <p class="menu-label">Friday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@friday&.name%></p>
+          <p class="menu-item text-center"><%=@friday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@friday&.price%></p>
+      </div>
+    </div>
+    <div class="item-box">
+      <p class="menu-label">Saturday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@saturday&.name%></p>
+          <p class="menu-item text-center"><%=@saturday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@saturday&.price%></p>
+      </div>
+    </div>
+    <div class="item-box">
+      <p class="menu-label">Sunday</p>
+      <div class="item-row">
+        <div class="item-row-column">
+          <p class="menu-item text-center"><%=@sunday&.name%></p>
+          <p class="menu-item text-center"><%=@sunday&.description%></p>
+        </div>
+        <p class="menu-item text-center"><%=@sunday&.price%></p>
+      </div>
+    </div>
+  </div>
+  <div class="buckets category-box">
+    <h3 class="menu-title">Bucket Deals</h3>
+    <hr />
+    <% @buckets.each do |item| %>
       <div class="item-box">
-      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item text-center"><%=item.name%></p>
+      <p class="menu-desc text-center"><%=item&.description%></p>
       <p class="menu-item"><%=item.price%></p>
       </div>
     <% end %>
   </div>
   <div class="appetizers category-box">
-    <h3 class="menu-title">Appetizers</h3>
+    <h3 class="menu-title">Starters</h3>
+    <hr />
     <% @appetizers.each do |item| %>
       <div class="item-box">
-      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item text-center"><%=item.name%></p>
+      <% if /wing/i.match(item.name) %>
+        <div class="wing-flavours">
+          <div class="wing-flava text-center">Spicy Chipotle</div>
+          <div class="wing-flava text-center">BBQ</div>
+          <div class="wing-flava text-center">Sweet Thai</div>
+          <div class="wing-flava text-center">Mango Chipotle</div>
+          <div class="wing-flava text-center">Honey Garlic</div>
+          <div class="wing-flava text-center">Salt & Pepper</div>
+          <div class="wing-flava text-center">Maple Chipotle</div>
+          <div class="wing-flava text-center">Spicy Ranch</div>
+        </div>
+      <% end %>
       <p class="menu-item"><%=item.price%></p>
       </div>
     <% end %>
   </div>
   <div class="mains category-box">
-    <h3 class="menu-title">Main</h3>
+    <h3 class="menu-title">Grill Station</h3>
+    <hr />
     <% @mains.each do |item| %>
       <div class="item-box">
-      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item text-center"><%=item.name%></p>
+      <p class="menu-desc text-center"><%=item&.description%></p>
       <p class="menu-item"><%=item.price%></p>
       </div>
     <% end %>
   </div>
-  <div class="desserts category-box">
-    <h3 class="menu-title">Dessert</h3>
-    <% @desserts.each do |item| %>
+  <div class="extras category-box">
+    <h3 class="menu-title">Extras</h3>
+    <hr />
+    <% @extras.each do |item| %>
       <div class="item-box">
-      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item text-center"><%=item.name%></p>
+      <p class="menu-desc text-center"><%=item&.description%></p>
       <p class="menu-item"><%=item.price%></p>
       </div>
     <% end %>
   </div>
   <div class="drinks category-box">
   <h3 class="menu-title">Drinks</h3>
+  <hr />
     <% @alcohols.each do |item| %>
       <div class="item-box">
-      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item text-center"><%=item.name%></p>
+      <% if /shots/i.match(item.name) %>
+        <div class="wing-flavours">
+          <div class="wing-flava text-center">Smirnoff</div>
+          <div class="wing-flava text-center">Crown Royal</div>
+          <div class="wing-flava text-center">Jack Daniels</div>
+          <div class="wing-flava text-center">Captain Morgan</div>
+          <div class="wing-flava text-center">Jose Cuervo</div>
+          <div class="wing-flava text-center">Black Label ($5)</div>
+        </div>
+      <% end %>
+      <% if /domestic/i.match(item.name) %>
+        <div class="beer-flavours">
+          <div class="beer-flava text-center">Canadian</div>
+          <div class="beer-flava text-center">Budweiser</div>
+          <div class="beer-flava text-center">Coors Light</div>
+        </div>
+      <% end %>
+      <% if /import/i.match(item.name) %>
+        <div class="beer-flavours">
+          <div class="beer-flava text-center">Corona</div>
+          <div class="beer-flava text-center">Heineken</div>
+          <div class="beer-flava text-center">Stella Artois</div>
+        </div>
+      <% end %>
       <p class="menu-item"><%=item.price%></p>
       </div>
     <% end %>
     <% @beverages.each do |item| %>
       <div class="item-box">
-      <p class="menu-item"><%=item.name%></p>
+      <p class="menu-item text-center"><%=item.name%></p>
+      <p class="menu-desc text-center"><%=item&.description%></p>
       <p class="menu-item"><%=item.price%></p>
       </div>
     <% end %>

@@ -7,10 +7,17 @@ class MenuItemsController < ApplicationController
 
   def index
     @menu = MenuItem.all
-    @combos = MenuItem.where(category: "combo")
+    @monday = MenuItem.find_by(subcategory: "monday")
+    @tuesday = MenuItem.find_by(subcategory: "tuesday")
+    @wednesday = MenuItem.find_by(subcategory: "wednesday")
+    @thursday = MenuItem.find_by(subcategory: "thursday")
+    @friday = MenuItem.find_by(subcategory: "friday")
+    @saturday = MenuItem.find_by(subcategory: "saturday")
+    @sunday = MenuItem.find_by(subcategory: "sunday")
+    @buckets = MenuItem.where(category: "special", subcategory: "bucket")
     @appetizers = MenuItem.where(category: "appetizer")
     @mains = MenuItem.where(category: "main")
-    @desserts = MenuItem.where(category: "dessert")
+    @extras = MenuItem.where(category: "extra")
     @alcohols = MenuItem.where(category: "alcohol")
     @beverages = MenuItem.where(category: "beverage")
   end
