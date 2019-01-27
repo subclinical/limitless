@@ -14,9 +14,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@monday&.name%></p>
-          <p class="menu-item text-center"><%=@monday&.description%></p>
+          <p class="menu-desc text-center"><%=@monday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@monday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @monday&.price%></p>
       </div>
     </div>
     <div class="item-box">
@@ -24,9 +24,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@tuesday&.name%></p>
-          <p class="menu-item text-center"><%=@tuesday&.description%></p>
+          <p class="menu-desc text-center"><%=@tuesday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@tuesday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @tuesday&.price%></p>
       </div>
     </div>
     <div class="item-box">
@@ -34,9 +34,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@wednesday&.name%></p>
-          <p class="menu-item text-center"><%=@wednesday&.description%></p>
+          <p class="menu-desc text-center"><%=@wednesday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@wednesday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @wednesday&.price%></p>
       </div>
     </div>
     <div class="item-box">
@@ -44,9 +44,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@thursday&.name%></p>
-          <p class="menu-item text-center"><%=@thursday&.description%></p>
+          <p class="menu-desc text-center"><%=@thursday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@thursday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @thursday&.price%></p>
       </div>
     </div>
     <div class="item-box">
@@ -54,9 +54,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@friday&.name%></p>
-          <p class="menu-item text-center"><%=@friday&.description%></p>
+          <p class="menu-desc text-center"><%=@friday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@friday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @friday&.price%></p>
       </div>
     </div>
     <div class="item-box">
@@ -64,9 +64,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@saturday&.name%></p>
-          <p class="menu-item text-center"><%=@saturday&.description%></p>
+          <p class="menu-desc text-center"><%=@saturday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@saturday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @saturday&.price%></p>
       </div>
     </div>
     <div class="item-box">
@@ -74,9 +74,9 @@
       <div class="item-row">
         <div class="item-row-column">
           <p class="menu-item text-center"><%=@sunday&.name%></p>
-          <p class="menu-item text-center"><%=@sunday&.description%></p>
+          <p class="menu-desc text-center"><%=@sunday&.description%></p>
         </div>
-        <p class="menu-item text-center"><%=@sunday&.price%></p>
+        <p class="menu-item text-center"><%='%.2f' % @sunday&.price%></p>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
       <p class="menu-desc text-center"><%=item&.description%></p>
-      <p class="menu-item"><%=item.price%></p>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
   </div>
@@ -109,7 +109,7 @@
           <div class="wing-flava text-center">Spicy Ranch</div>
         </div>
       <% end %>
-      <p class="menu-item"><%=item.price%></p>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
   </div>
@@ -120,7 +120,7 @@
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
       <p class="menu-desc text-center"><%=item&.description%></p>
-      <p class="menu-item"><%=item.price%></p>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
   </div>
@@ -131,7 +131,7 @@
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
       <p class="menu-desc text-center"><%=item&.description%></p>
-      <p class="menu-item"><%=item.price%></p>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
   </div>
@@ -165,14 +165,14 @@
           <div class="beer-flava text-center">Stella Artois</div>
         </div>
       <% end %>
-      <p class="menu-item"><%=item.price%></p>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
     <% @beverages.each do |item| %>
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
       <p class="menu-desc text-center"><%=item&.description%></p>
-      <p class="menu-item"><%=item.price%></p>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
   </div>
