@@ -2,4 +2,7 @@
   height: 30vh;
   justify-content: center;
   margin: 5em;
+  @media (max-width: 767px) {
+    margin: 5em 1em;
+  }
 }
