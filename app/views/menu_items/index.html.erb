@@ -5,10 +5,9 @@
 <div class="flex-box">
   <div class="specials category-box">
     <h3 class="menu-title">Daily Specials</h3>
-    <p class="menu-title">
+    <p class="text-center">
       served with rice/fries and soft drink
     </p>
-    <hr />
     <div class="item-box">
       <p class="menu-label">Monday</p>
       <div class="item-row">
@@ -82,7 +81,6 @@
   </div>
   <div class="buckets category-box">
     <h3 class="menu-title">Bucket Deals</h3>
-    <hr />
     <% @buckets.each do |item| %>
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
@@ -93,7 +91,6 @@
   </div>
   <div class="appetizers category-box">
     <h3 class="menu-title">Starters</h3>
-    <hr />
     <% @appetizers.each do |item| %>
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
@@ -110,12 +107,14 @@
         </div>
       <% end %>
       <p class="menu-item"><%='%.2f' % item.price%></p>
+      <% if /wing/i.match(item.name) %>
+      <p class="menu-item">21.99 for 2lbs</p>
+      <% end %>
       </div>
     <% end %>
   </div>
   <div class="mains category-box">
     <h3 class="menu-title">Grill Station</h3>
-    <hr />
     <% @mains.each do |item| %>
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
@@ -126,7 +125,6 @@
   </div>
   <div class="extras category-box">
     <h3 class="menu-title">Extras</h3>
-    <hr />
     <% @extras.each do |item| %>
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>
@@ -137,10 +135,17 @@
   </div>
   <div class="drinks category-box">
   <h3 class="menu-title">Drinks</h3>
-  <hr />
+  <div class="item-box space-bottom">
+    <p class="menu-item text-center">Asahi On Tap</p>
+    <div class="wing-flavours">
+      <div class="wing-flava text-center">Pint 7.99</div>
+      <div class="wing-flava text-center">Pitcher 20.99</div>
+    </div>
+  </div>
+  <h4 class="text-center">Cocktails</h4>
     <% @alcohols.each do |item| %>
       <div class="item-box">
-      <p class="menu-item text-center"><%=item.name%></p>
+      <h4 class="menu-item text-center"><%=item.name%></h4>
       <% if /shots/i.match(item.name) %>
         <div class="wing-flavours">
           <div class="wing-flava text-center">Smirnoff</div>
@@ -162,12 +167,16 @@
         <div class="beer-flavours">
           <div class="beer-flava text-center">Corona</div>
           <div class="beer-flava text-center">Heineken</div>
-          <div class="beer-flava text-center">Stella Artois</div>
+          <div class="beer-flava text-center">San Miguel</div>
         </div>
+      <% end %>
+      <% if item.description.present? %>
+        <p class="menu-item text-center"><%= item.description %></p>
       <% end %>
       <p class="menu-item"><%='%.2f' % item.price%></p>
       </div>
     <% end %>
+    <h3 class="menu-title">Non-alcoholic</h3>
     <% @beverages.each do |item| %>
       <div class="item-box">
       <p class="menu-item text-center"><%=item.name%></p>

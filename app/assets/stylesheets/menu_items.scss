@@ -10,6 +10,8 @@ body {
 
 .menu-title {
   text-align: center;
+  padding: 1em 0;
+  border: 1px solid #aaa;
   font-family: 'Special Elite', cursive;
 }
 
@@ -21,6 +23,7 @@ body {
   justify-content: space-around;
   .category-box {
     width: 70%;
+    margin-bottom: 3em;
     @media (max-width: 767px) {
       width: 100%;
     }
