@@ -18,7 +18,8 @@ class MenuItemsController < ApplicationController
     @appetizers = MenuItem.where(category: "appetizer")
     @mains = MenuItem.where(category: "main")
     @extras = MenuItem.where(category: "extra")
-    @alcohols = MenuItem.where(category: "alcohol").order(subcategory: "DESC")
+    @alcohols = MenuItem.where(category: "alcohol").where.not(subcategory: "bomb").order(subcategory: "DESC")
+    @bombs = MenuItem.where(category: "alcohol", subcategory: "bomb")
     @beverages = MenuItem.where(category: "beverage")
   end
 end

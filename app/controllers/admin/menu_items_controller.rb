@@ -44,7 +44,8 @@ class Admin::MenuItemsController < Admin::AdminController
       :price,
       :serving_size,
       :category,
-      :subcategory
+      :subcategory,
+      :img_url
     )
   end
 end

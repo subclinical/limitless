@@ -14,6 +14,9 @@ GOOGLE_MAP_API_KEY: AIzaSyBnxmWdLVYkqrCUqZp1gPa4OyLOaXzjR9M
 ADMIN_ID: turnupcrew
 ADMIN_PASSWORD: kawhinotabar?
 POSTGRES_HOST: "localhost"
+AWS_ACCESS_KEY_ID: AKIAIBZGY6H63KOJQ4AA
+AWS_SECRET_ACCESS_KEY: 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
+AWS_REGION: "us-east-2"
 # POSTGRES_DB: "limitless_development"
 # POSTGRES_USER: "subclinical"
 # POSTGRES_PASSWORD: "password1"

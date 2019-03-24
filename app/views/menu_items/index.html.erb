@@ -142,6 +142,16 @@
       <div class="wing-flava text-center">Pitcher 20.99</div>
     </div>
   </div>
+  <h4 class="text-center">Bomb Shots</h4>
+  <% @bombs.each do |item| %> 
+    <div class="item-box">
+      <h4 class="menu-item text-center"><%=item.name%></h4>
+      <% if item.description.present? %>
+        <p class="menu-item text-center"><%= item.description %></p>
+      <% end %>
+      <p class="menu-item"><%='%.2f' % item.price%></p>
+    </div>
+  <% end %>
   <h4 class="text-center">Cocktails</h4>
     <% @alcohols.each do |item| %>
       <div class="item-box">

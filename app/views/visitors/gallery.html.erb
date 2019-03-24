@@ -1,0 +1,13 @@
+<!-- Gallery -->
+<div class="flex-box gallery">
+  <h3>Gallery</h3>
+  <div class="galleria">
+    <% @arr.map do |img| %>
+    <div>
+      <a href=<%= img %>>
+        <img src=<%= img %> alt="test">
+      </a>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.gallery {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .galleria {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div {
+      width: 24vw;
+      height: 24vw;
+      margin-bottom: 4vw;
+      overflow: hidden;
+      img {
+        // position: absolute;
+        // margin: auto; 
+        // height: 150px;
+        // width: 150px;
+        // left: -100%;
+        // right: -100%;
+        // top: -100%;
+        // bottom: -100%;
+      }
+    }
+  }
+}
