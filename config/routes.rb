@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/menu' => 'menu_items#index'
   get '/about' => 'visitors#about'
   get '/info' => 'visitors#info'
-  get '/gallery' => 'visitors#gallery'
+  # get '/gallery' => 'visitors#gallery'
   get '/contact' => 'visitors#contact'
 
   root to: 'visitors#index'
